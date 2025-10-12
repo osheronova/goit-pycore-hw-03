@@ -3,10 +3,10 @@ import re
 
 def normalize_phone(phone_number: str) -> str:
     # Replace all non-digit characters with "" incl. "+"
-    normalized_number = re.sub(r"\D", "", phone_number)
+    normalized_numbers = re.sub(r"\D", "", phone_number)
     # Add the international code '+38', if it is not there
-    normalized_number = "+38" + normalized_number.removeprefix("38")
-    return normalized_number
+    normalized_phone = "+38" + normalized_numbers.removeprefix("38")
+    return normalized_phone
 
 
 raw_numbers = [
