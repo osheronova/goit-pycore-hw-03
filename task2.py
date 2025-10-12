@@ -1,7 +1,7 @@
 import random
 
 
-def get_numbers_ticket(min: int, max: int, quantity: int):
+def get_numbers_ticket(min: int, max: int, quantity: int) -> int:
     # We check the validity of the given arguments
     if not (1 <= min <= quantity <= max <= 1000 and quantity > 0): # I do wan't to cover this case  get_numbers_ticket(1, 1, 1)
         return []
