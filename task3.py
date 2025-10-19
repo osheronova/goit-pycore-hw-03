@@ -6,6 +6,7 @@ def normalize_phone(phone_number: str) -> str:
     normalized_numbers = re.sub(r"\D", "", phone_number)
     # Add the international code '+38', if it is not there
     normalized_phone = "+38" + normalized_numbers.removeprefix("38")
+    # normalized_phone = "+38" + normalized_numbers.lstrip("38")
     return normalized_phone
 
 
@@ -15,6 +16,7 @@ raw_numbers = [
     "+380 44 123 4567",
     "380501234567",
     "    +38(050)123-32-34",
+    "    +44(050)123-32-34",
     "     0503451234",
     "(050)8889900",
     "38050-111-22-22",
